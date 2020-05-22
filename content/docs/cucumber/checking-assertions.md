@@ -92,7 +92,8 @@ We recommend using Node.js' built-in [assert](https://nodejs.org/dist/latest-v8.
 ```javascript
 const assert = require('assert')
 
-Then('the result should be {word}', function (expected) {
+Then('the result should be {word}', function (    expect(pageTitle).toBe("Stratus Core - Sample App");
+ed) {
   // this.actual is typically set in a previous step
   assert.equal(this.actual, expected)
 })
@@ -103,7 +104,7 @@ Then('the result should be {word}', function (expected) {
 You can use any other assertion library if you wish. Here is an example using [Chai](https://www.chaijs.com/):
 
 ```javascript
-const expect = require('chai')
+const { expect } = require('chai')
 
 Then('the result should be {word}', function (expected) {
   expect(this.actual).to.eql(expected)
